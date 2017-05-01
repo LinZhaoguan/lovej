@@ -1,0 +1,32 @@
+server:
+  port: 8080
+
+spring:
+#datasource start
+  datasource:
+    url: jdbc:mysql://127.0.0.1:3306/lovej?useSSL=true
+    username: root
+    password: 123456
+    type: com.alibaba.druid.pool.DruidDataSource
+    platform: mysql
+    driver-class-name: com.mysql.jdbc.Driver
+#datasource end
+
+# thymeleaf start
+  thymeleaf:
+    enabled: true
+    check-template-location: true
+    content-type: text/html
+    encoding: UTF-8
+    mode: HTML5
+    prefix: classpath:/templates/
+    suffix: .html
+#    开发的时候关闭缓存，看到实时效果
+    cache: false
+# thymeleaf end
+
+#mybatis strat
+mybatis:
+  mapper-locations: /mybatis/*Mapper.xml
+  type-aliases-package: com.lovej.Entity
+#mybatis end
