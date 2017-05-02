@@ -1,5 +1,7 @@
 package com.lovej.Entity;
 
+import com.baomidou.mybatisplus.annotations.TableId;
+
 /**
  * Created with IntelliJ IDEA.
  * User: Linzhaoguan
@@ -8,9 +10,10 @@ package com.lovej.Entity;
  */
 public class Demo {
 
+    @TableId
     private Integer id;
     private String name;
-    private String age;
+    private Integer age;
 
     public Integer getId() {
         return id;
@@ -28,11 +31,11 @@ public class Demo {
         this.name = name;
     }
 
-    public String getAge() {
+    public Integer getAge() {
         return age;
     }
 
-    public void setAge(String age) {
+    public void setAge(Integer age) {
         this.age = age;
     }
 

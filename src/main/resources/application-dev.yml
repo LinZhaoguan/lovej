@@ -23,10 +23,14 @@ spring:
     suffix: .html
 #    开发的时候关闭缓存，看到实时效果
     cache: false
+  devtools:
+    restart:
+      additional-paths: src/main/java/com/lovej
 # thymeleaf end
 
 #mybatis strat
 mybatis:
-  mapper-locations: /mybatis/*Mapper.xml
+  mapper-locations: classpath:com/lovej/Mapper/xml/*Mapper.xml
   type-aliases-package: com.lovej.Entity
 #mybatis end
+

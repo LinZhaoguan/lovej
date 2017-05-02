@@ -1,5 +1,6 @@
-package com.lovej.Dao;
+package com.lovej.Mapper;
 
+import com.baomidou.mybatisplus.mapper.BaseMapper;
 import com.lovej.Entity.Demo;
 import org.apache.ibatis.annotations.Mapper;
 import org.apache.ibatis.annotations.Select;
@@ -13,8 +14,6 @@ import java.util.List;
  * Time: 22:48
  */
 @Mapper
-public interface DemoDao {
+public interface DemoMapper extends BaseMapper<Demo> {
 
-    @Select("select * from demo")
-    List<Demo> getDemoList();
 }
