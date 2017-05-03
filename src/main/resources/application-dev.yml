@@ -23,14 +23,24 @@ spring:
     suffix: .html
 #    开发的时候关闭缓存，看到实时效果
     cache: false
+# thymeleaf end
+#    热部署 start
   devtools:
     restart:
       additional-paths: src/main/java/com/lovej
-# thymeleaf end
+#    热部署 end
+  redis:
+    host: localhost
+    password:
+    port: 6379
+
+
 
 #mybatis strat
 mybatis:
   mapper-locations: classpath:com/lovej/Mapper/xml/*Mapper.xml
   type-aliases-package: com.lovej.Entity
+
 #mybatis end
 
+#log4j2

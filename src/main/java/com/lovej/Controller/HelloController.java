@@ -1,6 +1,8 @@
 package com.lovej.Controller;
 
 import com.lovej.Service.DemoService;
+import com.xiaoleilu.hutool.log.Log;
+import com.xiaoleilu.hutool.log.LogFactory;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Controller;
 import org.springframework.ui.ModelMap;
@@ -16,6 +18,8 @@ import org.springframework.web.bind.annotation.ResponseBody;
 @Controller
 public class HelloController {
 
+    Log log = LogFactory.get();
+
     @Autowired
     private DemoService demoService;
 
@@ -25,6 +29,7 @@ public class HelloController {
         return "index";
     }
 
+    @ResponseBody
     @RequestMapping(value = "hello")
     public String hello(){
         return "Hello World";
@@ -33,6 +38,7 @@ public class HelloController {
     @ResponseBody
     @RequestMapping(value = "demo")
     public String demo(){
+        log.info("easy log!!!");
         return demoService.getDemoList().toString();
     }
 

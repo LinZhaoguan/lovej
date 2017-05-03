@@ -15,15 +15,15 @@ public class LovejApplication {
 		SpringApplication.run(LovejApplication.class, args);
 	}
 
-	@Bean
+	/*@Bean
 	public CommandLineRunner commandLineRunner(ApplicationContext context){
 		return args -> {
-			/*System.out.println("Let's inspect the beans provided by Spring Boot:");
+			System.out.println("Let's inspect the beans provided by Spring Boot:");
 
 			String[] beanNames = context.getBeanDefinitionNames();
 			for (String beanName : beanNames) {
 				System.out.println(beanName);
-			}*/
+			}
 		};
-	}
+	}*/
 }
