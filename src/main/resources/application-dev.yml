@@ -29,18 +29,29 @@ spring:
     restart:
       additional-paths: src/main/java/com/lovej
 #    热部署 end
+# redis start
   redis:
     host: localhost
     password:
     port: 6379
-
+    pool:
+      max-idle: 8
+      min-idle: 0
+      max-active: 8
+      max-wait: 1
+# redis end
+# aop start
+  aop:
+    proxy-target-class: false
+# aop end
 
 
 #mybatis strat
 mybatis:
   mapper-locations: classpath:com/lovej/Mapper/xml/*Mapper.xml
   type-aliases-package: com.lovej.Entity
-
+  configuration:
+    interceptors:
 #mybatis end
 
 #log4j2
